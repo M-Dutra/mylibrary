@@ -24,11 +24,12 @@
 .footer .fa-heart {
   color: #D23333;
 }
-html {
+html,
+body {
   height: 100%;
 }
-body {
-  min-height: 100%;
-  display: grid;
-  grid-template-rows: 1fr auto;
+
+#page-content {
+  flex: 1 0 auto;
+  background-color: white;
 }
