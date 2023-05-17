@@ -1,0 +1,9 @@
+<%# Banner %>
+<div class="position-relative">
+  <div class="card-category card-large"
+      style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+      url(<%= asset_path('acdc.jpeg')%>)">
+    <h1> My library </h1>
+  </div>
+  <span class="book-banner-tag"><%= pluralize(@books.count, "book") %></span>
+</div>
