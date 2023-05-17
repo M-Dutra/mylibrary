@@ -4,4 +4,6 @@ class Book < ApplicationRecord
   # Year between [1000,2050]
   # VALID_YEAR_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   # validates :year, presence: true, format: { with: VALID_YEAR_REGEX}
+  validates :rating, presence: true
+  has_one_attached :photo
 end

@@ -5,7 +5,6 @@
   background: #1EDD88;
   transition: background 0.3s ease;
 }
-
 .book-banner-tag {
   color: white;
   padding: 6px 16px;
@@ -15,4 +14,11 @@
   position: absolute;
   top: 1rem;
   right: 1rem;
+}
+.btn-cancel {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: #6a757e;
+  transition: background 0.3s ease;
 }
