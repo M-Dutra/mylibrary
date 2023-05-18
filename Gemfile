@@ -51,6 +51,7 @@ gem "bootsnap", require: false
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
+  gem "dotenv-rails"
 end
 
 group :development do
@@ -69,3 +70,5 @@ gem "sassc-rails"
 gem "autoprefixer-rails", "10.2.5"
 gem "font-awesome-sass", "~> 6.1.1"
 gem "simple_form", github: "heartcombo/simple_form"
+gem "cloudinary"
+

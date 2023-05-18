@@ -25,7 +25,11 @@
     <% @books.each do |book| %>
       <div class="col-12 col-sm-2 mb-4" data-aos="zoom-in">
         <div class="bg-white rounded shadow h-100">
-          <%= image_tag(book.photo.attached? ? cl_image_path(book.photo.key) : asset_path('default_book.jpg'), alt: book.title, class: "book-img rounded-top")%>
+          <% if book.photo.key %>
+            <%= cl_image_tag(book.photo.key, class: "book-img rounded-top") %>
+          <% else %>
+            <img src="<%= asset_path('default_book.jpg') %>" alt="<%= book.title%>" class="book-img rounded-top">
+          <% end %>%
           <div class="p-3 rounded-bottom d-flex flex-column">
             <strong><%= book.title %> </strong>
             <small class="text-muted"><%= book.author %></small>
