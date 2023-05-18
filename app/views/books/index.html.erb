@@ -13,7 +13,7 @@
 <%# Cards %>
 <div class="container mb-5">
   <div class="d-flex justify-content-between my-4">
-    <span class="mb-2 d-block"><small><em class="text-muted"><%= "You haven't saved any movies yet!" if @books.empty? %></em></small></span>
+    <span class="mb-2 d-block"><small><em class="text-muted"><%= "You haven't saved any books yet!" if @books.empty? %></em></small></span>
     <div>
       <%= link_to "add a book", new_book_path, class: "btn btn-flat" %>
     </div>

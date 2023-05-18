@@ -2,7 +2,7 @@ class BooksController < ApplicationController
   before_action :authenticate_user!, only: %i[new create]
 
   def index
-    @books = Book.all
+    @books = current_user.books
   end
 
   def new
