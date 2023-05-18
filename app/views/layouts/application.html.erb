@@ -12,10 +12,7 @@
 
   <body class="d-flex flex-column">
     <%= render 'shared/navbar' %>
-    <%= render 'shared/flashes' %>
     <div id="page-content">
-      <%# <h2 class="text-center mt-5">Hi <%= current_user.email%></h2> %>
-      <%# <h2 class="text-center mt-5">Hi <%= user_signed_in? %></h2> %>
       <%= yield %>
     </div>
     <%= render 'shared/footer' %>
