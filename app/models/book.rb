@@ -6,4 +6,5 @@ class Book < ApplicationRecord
   # validates :year, presence: true, format: { with: VALID_YEAR_REGEX}
   validates :rating, presence: true
   has_one_attached :photo
+  belongs_to :user
 end

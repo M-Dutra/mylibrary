@@ -1,3 +1,15 @@
+<%# Banner %>
+<div class="position-relative">
+  <div class="card-category card-large"
+      style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+      url(<%= asset_path('banner.jpeg')%>)">
+    <h1> My library </h1>
+  </div>
+  <span class="book-banner-tag"><%= pluralize(@books.count, "book") %></span>
+</div>
+
+
+
 <%# Cards %>
 <div class="container mb-5">
   <div class="d-flex justify-content-between my-4">
