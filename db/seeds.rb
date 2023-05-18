@@ -7,8 +7,8 @@
 #   Character.create(name: "Luke", movie: movies.first)
 # require "open-uri"
 
-# User.destroy_all
 # Book.destroy_all
+# User.destroy_all
 
 # rui = User.new(
 #   username: "Rui Borges",
