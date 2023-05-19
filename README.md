@@ -1,42 +1,8 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This project is a simple library application that allows the user to add and remove books from his personal library. Each user must create an account, and by logging in, he has access to his own library.
 
-Things you may want to cover:
-
-* Ruby version = 3.1.2
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-# README
-
-
-
-This README would normally document whatever steps are necessary to get the
-
-application up and running.
-
-
-
-Things you may want to cover:enter code here
-
-
+The user can classify books by different categories: title, author, year of publication, and opinion about the book (star system), as well as having the option of uploading an image of the cover.
 
  - Ruby version - `3.1.2`
 
