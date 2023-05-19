@@ -1,6 +1,5 @@
 class BooksController < ApplicationController
-  before_action :authenticate_user!, only: %i[new create]
-  before_action :require_user, only: %i[index]
+  before_action :authenticate_user!, only: %i[index new create]
 
   def index
     @books = current_user.books.all
@@ -36,12 +35,5 @@ class BooksController < ApplicationController
 
   def book_params
     params.require(:book).permit(:title, :author, :year, :photo, :rating)
-  end
-
-  def require_user
-    if !user_signed_in?
-      flash[:alert] = "You must be logged in to perform that action"
-      redirect_to new_user_session_path
-    end
   end
 end
