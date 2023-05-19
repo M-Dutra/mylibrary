@@ -1,8 +1,8 @@
 # README
 
-This project is a simple library application that allows the user to add and remove books from his personal library. Each user must create an account, and by logging in, he has access to his own library.
+This is a basic library application that enables users to manage their personal book collections. Each user needs to create an account, and upon logging in, they gain access to their own library.
 
-The user can classify books by different categories: title, author, year of publication, and opinion about the book (star system), as well as having the option of uploading an image of the cover.
+Users can categorize books based on title, author, year of publication, and personal rating using a star system. Additionally, they have the option to upload cover images for the books.
 
  - Ruby version - `3.1.2`
 
