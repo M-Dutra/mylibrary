@@ -1,9 +1,9 @@
 class BooksController < ApplicationController
   before_action :authenticate_user!, only: %i[new create]
-  before_action :require_user, only: %i[index new create destroy]
+  before_action :require_user, only: %i[index]
 
   def index
-    @books = current_user.books.all 
+    @books = current_user.books.all
   end
 
   def new
