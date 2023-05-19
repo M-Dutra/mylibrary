@@ -26,6 +26,5 @@ Users can categorize books based on title, author, year of publication, and pers
 	   `rails db:seed`
 
  - Launch  server
-	Open a  **new tab**  in your terminal: `rails server`
-	Open a  **second tab**  in your terminal: `yarn build --watch`
+	Open a  **new tab**  in your terminal: `bin/dev`
 	Keep both tabs open. The server is running Open your browser and go to  `http://localhost:3000/`
