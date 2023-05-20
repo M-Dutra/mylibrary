@@ -45,9 +45,7 @@
                   <% end %>
                 </span>
               </div>
-              <% if user_signed_in? && book.user == current_user%>
                 <small class="text-right flex-shrink-0"><%= link_to "delete", book_path(book), data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to remove #{book.title} from your library?"}, class: 'text-danger' %></small>
-              <% end %>
             </div>
           </div>
         </div>

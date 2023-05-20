@@ -1,5 +1,5 @@
 class BooksController < ApplicationController
-  before_action :authenticate_user!, only: %i[index new create]
+  before_action :authenticate_user!
 
   def index
     @books = current_user.books.all
@@ -22,8 +22,7 @@ class BooksController < ApplicationController
 
   def destroy
     @book = Book.find(params[:id])
-    @book.destroy
-    if @book.destroyed?
+    if @book.destroy
       flash[:alert] = "Book was deleted successfully"
     else
       flash[:alert] = "Failed to delete the book"
