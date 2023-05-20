@@ -18,12 +18,3 @@
     </div>
   </div>
 </div>
-
-<h1>erros de validacao:</h1>
-<% if @book.errors.any? %>
-  <ul>
-    <% @book.errors.full_messages.each do |message| %>
-      <li><%= message %></li>
-    <% end %>
-  </ul>
-<% end %>

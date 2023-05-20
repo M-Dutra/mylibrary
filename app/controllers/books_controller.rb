@@ -24,9 +24,9 @@ class BooksController < ApplicationController
     @book = Book.find(params[:id])
     @book.destroy
     if @book.destroyed?
-      flash[:alert] = "Book was destroyed successfully"
+      flash[:alert] = "Book was deleted successfully"
     else
-      flash[:alert] = "Failed to destroy the book"
+      flash[:alert] = "Failed to delete the book"
     end
     redirect_to books_path
   end
