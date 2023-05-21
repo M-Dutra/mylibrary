@@ -79,8 +79,8 @@ book = Book.new(
   user_id: rui.id
 )
 
-file = URI.open("https://res.cloudinary.com/dkax3m0du/image/upload/v1684483614/mdxzykbzrvrtawybxirj.jpg")
-book.photo.attach(io: file, filename: "dune.jpg", content_type: "image/png")
+file = URI.open("https://res.cloudinary.com/dkax3m0du/image/upload/v1684582045/xtes2kcpqoaj0wlddemb.jpg")
+book.photo.attach(io: file, filename: "dune3.jpg", content_type: "image/png")
 book.save!
 
 book = Book.new(
