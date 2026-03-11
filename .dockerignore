@@ -1,0 +1,12 @@
+.git
+.browserslistrc
+tmp/*
+log/*
+storage/*
+node_modules
+public/packs
+public/assets
+/vendor/bundle
+.env
+.dockerignore
+Dockerfile
