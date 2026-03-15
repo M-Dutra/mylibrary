@@ -1,0 +1,27 @@
+require:
+  - rubocop-rails
+
+AllCops:
+  Exclude:
+    - 'db/schema.rb'
+    - 'bin/*'
+    - 'node_modules/**/*'
+    - 'vendor/**/*'
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/StringLiterals:
+  EnforcedStyle: single_quotes
+
+Style/Documentation:
+  Enabled: false
+
+Metrics/MethodLength:
+  Exclude:
+    - 'db/migrate/**/*'
+    - 'db/schema.rb'
+
+Metrics/AbcSize:
+  Exclude:
+    - 'db/migrate/**/*'

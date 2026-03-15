@@ -1,13 +1,15 @@
+# frozen_string_literal: true
+
 require 'test_helper'
 
 class BookTest < ActiveSupport::TestCase
   def setup
-    @user = User.new(email:"manuel@gmail.com", username:"Manuel Dutra" )
+    @user = User.new(email: 'manuel@gmail.com', username: 'Manuel Dutra')
     @book = Book.new(
       title: 'The Great Gatsby',
       author: 'F. Scott Fitzgerald',
       year: 1925,
-      rating:4,
+      rating: 4,
       user: @user
     )
   end
@@ -72,6 +74,4 @@ class BookTest < ActiveSupport::TestCase
     @book.rating = 6
     assert_not @book.valid?
   end
-
-
 end

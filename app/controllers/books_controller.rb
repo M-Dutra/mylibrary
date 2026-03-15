@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class BooksController < ApplicationController
   before_action :authenticate_user!
 
@@ -12,7 +14,7 @@ class BooksController < ApplicationController
   def create
     @book = current_user.books.build(book_params)
     if @book.save
-      flash[:notice] = "Book was created successfully"
+      flash[:notice] = 'Book was created successfully'
       redirect_to books_path
     else
       render 'new', status: :unprocessable_entity
@@ -21,11 +23,11 @@ class BooksController < ApplicationController
 
   def destroy
     @book = Book.find(params[:id])
-    if @book.destroy
-      flash[:alert] = "Book was deleted successfully"
-    else
-      flash[:alert] = "Failed to delete the book"
-    end
+    flash[:alert] = if @book.destroy
+                      'Book was deleted successfully'
+                    else
+                      'Failed to delete the book'
+                    end
     redirect_to books_path
   end
 
