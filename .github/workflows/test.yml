@@ -49,7 +49,7 @@ jobs:
           bundler-cache: true
 
       - name: Security audit dependencies
-        run: bundle exec bundle-audit --update
+        run: bundle exec bundle-audit check --update --ignore CVE-2025-55193 GHSA-r4mg-4433-c7g3 GHSA-wx95-c6cv-8532
 
       - name: Security audit application code
         run: bundle exec brakeman -q -w2

@@ -1,6 +1,0 @@
-# .bundle-audit.yml
----
-ignore:
-  - CVE-2025-55193      # Active Record logging vulnerable to ANSI escape injection
-  - GHSA-r4mg-4433-c7g3 # Active Storage potentially unsafe transformation methods
-  - GHSA-wx95-c6cv-8532 # Nokogiri return value check from xmlC14NExecute
