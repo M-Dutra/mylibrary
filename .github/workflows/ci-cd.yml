@@ -8,12 +8,12 @@ on:
   workflow_dispatch:
 
 jobs:
-  # 1. TESTES E QUALIDADE (CI)
+  # 1. TESTS QUALITY (CI)
   test:
     runs-on: ubuntu-latest
     services:
       postgres:
-        image: postgres:15-alpine # Usei uma versão mais recente
+        image: postgres:15-alpine
         ports: ["5432:5432"]
         env:
           POSTGRES_DB: rails_test
@@ -34,7 +34,7 @@ jobs:
       - name: Install Ruby and gems
         uses: ruby/setup-ruby@v1
         with:
-          bundler-cache: true # Faz cache automático das gems (mais rápido)
+          bundler-cache: true # GEMS WITH AUTOMATIC CACHE (faster)
 
       - name: Set up database schema
         run: bin/rails db:schema:load
@@ -42,7 +42,7 @@ jobs:
       - name: Run tests
         run: bin/rails test
 
-  # 2. SEGURANÇA E ESTILO (LINT)
+  # 2. SECURITY AND STYLE (LINT)
   lint:
     runs-on: ubuntu-latest
     steps:
@@ -62,12 +62,12 @@ jobs:
       - name: Lint Ruby files
         run: bundle exec rubocop --parallel
 
-  # 3. CONSTRUÇÃO E ENVIO (CD)
+  # 3. (CD)
   build-and-push-image:
     runs-on: ubuntu-latest
-    # ESTA LINHA É A CHAVE: Só corre se o Test e o Lint passarem!
+    # Only run if Test and Lint if passed!
     needs: [test, lint]
-    # Só faz o push se for merge na master (não em Pull Requests)
+    # Only push if it's a merge into the master branch (not Pull Requests).
     if: github.event_name == 'push'
 
     steps:
