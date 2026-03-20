@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: postgres-pvc
+  namespace: my-library-cluster-namespace
+spec:
+  accessModes:
+    - ReadWriteOnce  # Only one Pod can write to the volume at a time
+  resources:
+    requests:
+      storage: 1Gi # 1 Gigabyte is more than enough for this project

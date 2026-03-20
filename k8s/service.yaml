@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: mylibrary-service
+  namespace: my-library-cluster-namespace
+spec:
+  type: NodePort # Exposes the cluster port to your local machine
+  selector:
+    app: my-library # Must match the label we set in the Rails Deployment
+  ports:
+    - protocol: TCP
+      port: 80 # The port the service "listens" on
+      targetPort: 3000 # The port where Rails is running inside the container
+      nodePort: 30080 # The port you'll use in your browser (must be between 30000-32767)
