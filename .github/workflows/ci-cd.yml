@@ -99,3 +99,14 @@ jobs:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
+
+      - name: Update Kubernetes Manifest
+        run:  |
+          IMAGE_TAG="sha-${{ steps.meta.outputs.version }}"
+          sed -i "s|image: mfdutra/mylibrary-web:latest|image: mfdutra/mylibrary-web:$IMAGE_TAG|g" k8s/deployment.yaml
+          echo "Manifesto atualizado para a imagem: $IMAGE_TAG"
+      - name: Upload Updated Manifest (Artifact)
+        uses: actions/upload-artifact@v4
+        with:
+          name: k8s-manifest
+          path: k8s/deployment.yaml
