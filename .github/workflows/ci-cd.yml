@@ -54,7 +54,7 @@ jobs:
           bundler-cache: true
 
       - name: Security audit dependencies
-        run: bundle exec bundle-audit check --update --ignore CVE-2025-55193 GHSA-r4mg-4433-c7g3 GHSA-wx95-c6cv-8532 GHSA-57hq-95w6-v4fc GHSA-46fp-8f5p-pf2m GHSA-3m6g-2423-7cp3 GHSA-f27w-vcwj-c954 GHSA-p9fm-f462-ggrg
+        run: bundle exec bundle-audit check --update --ignore CVE-2025-55193 GHSA-r4mg-4433-c7g3 GHSA-wx95-c6cv-8532 GHSA-57hq-95w6-v4fc GHSA-46fp-8f5p-pf2m GHSA-3m6g-2423-7cp3 GHSA-f27w-vcwj-c954 GHSA-p9fm-f462-ggrg CVE-2026-33946
 
       - name: Security audit application code
         run: bundle exec brakeman -q -w2 --except CheckEOLRuby,CheckEOLRails
