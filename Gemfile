@@ -62,6 +62,7 @@ group :development, :test do
   gem 'bundle-audit', require: false
   gem 'debug', platforms: %i[mri mingw x64_mingw]
   gem 'dotenv-rails'
+  gem 'mcp', '>= 0.9.2'  # Fix for CVE-2026-33946
   gem 'rubocop-rails', require: false
 end
 
