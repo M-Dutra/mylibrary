@@ -4,7 +4,7 @@ metadata:
   name: first-deployment
   namespace: my-library-cluster-namespace #kubectl create namespace my-library-cluster-namespace
 spec:
-  replicas: 1 # Pod number
+  replicas: 2 # Pod number
   selector: # How to find the pods that this deployment manage
     matchLabels:
       app: my-library # Connect Deployment to the Pods
